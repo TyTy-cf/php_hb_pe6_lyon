@@ -3,18 +3,21 @@
 include_once 'models/Product.php';
 
 $table = new Product();
-$table->name = 'Table playmobil';
-$table->price = 119.99;
-$table->description = 'Super table playmobil en excellent état, peu servie';
+$table->setCreatedAt(null);
+$table->addTag('playmobil');
+
+//$table->setPrice(119.99);
+//$table->setName('Table playmobil');
+//$table->setDescription('Super table playmobil en excellent état, peu servie');
 
 $seat = new Product();
-$seat->name = '72Z';
-$seat->price = 520;
-$seat->description = 'Super chaise de bureau gaming de luxe, super confortable pour vos sessions nocturnes';
-$seat->createdAt = new DateTime();
+$seat->setPrice(520);
+$seat->setDescription('Super chaise de bureau gaming de luxe, super confortable pour vos sessions nocturnes');
+$seat->setCreatedAt(new DateTime());
+$seat->setName('72Z');
 
-var_dump($seat);
+$ikea = new Brand();
+$ikea->setName('Ikea');
 
-$seat->description = 'Super chaise de bureau gaming de luxe mais le modèle au-dessus';
-
-var_dump($seat);
+$seat->setBrand($ikea);
+$table->setBrand($ikea);
