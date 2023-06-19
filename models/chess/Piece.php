@@ -1,6 +1,6 @@
 <?php
 
-class Piece
+abstract class Piece
 {
 
     protected string $color;
@@ -10,7 +10,7 @@ class Piece
     public function __construct(string $color, string $pieceName)
     {
         $this->color = $color;
-        $this->image = 'assets/chess/' . strtolower($pieceName) . '-' . $color . '.png';
+        $this->image = '/assets/chess/' . strtolower($pieceName) . '-' . $color . '.png';
     }
 
     /**
@@ -29,8 +29,6 @@ class Piece
         return $this->image;
     }
 
-    public function move(): void {
-        echo 'La pièce bouge...';
-    }
+    public abstract function move();
 
 }

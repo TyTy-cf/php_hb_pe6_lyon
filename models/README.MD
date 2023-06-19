@@ -44,4 +44,5 @@ Toute méthode décrite dans la classe parente, peut être réécrite (override)
 
 Le mot clé "parent::METHOD" permet tout de même de rappeler le comportement de la classe mère et ce même si l'on réécrit la méthode.
 
-
+Abstract est un mot clé utilisé au niveau des classes, afin d'indiquer que la classe est une classe abstraite : elle ne peut être instanciée que par le biais de ses enfants
+A l'intérieur de celle-ci, on peut mettre des méthodes "abstract" qui sont des méthodes sans corps, c'est-à-dire que l'on oblige les classes enfants à les redéfinir (écrire le corps de la méthode)

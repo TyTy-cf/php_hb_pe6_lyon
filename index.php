@@ -38,7 +38,7 @@ $pieces[] = new Rook('white');
 $pieces[] = new Rook('white');
 
 foreach ($pieces as $piece) {
-   var_dump($piece);
+    echo '<img src="'. $piece->getImage() .'">';
 }
 
 
