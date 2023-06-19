@@ -32,3 +32,16 @@ Officiellement il détruit les objets créés - mais on a pas besoin de l'appele
 
 PHP libère la mémoire utilisée par les objets automatiquement lorsque vous n'en avait plus besoin, on appelle ça : **garbage collector**
 
+### héritage
+On déclare une classe qui hérite d'une autre par le mot clé : **extends**
+
+Une classe qui hérite d'une autre bénéficie de tous les attributs et méthodes de la classe parente (selon la visibilité bien sûr...)
+
+Toute méthode décrite dans la classe parente, peut être réécrite (override) dans les classes enfants.
+- Si la classe enfant ne redéfinit pas la méthode, alors la méthode de la mère sera appelée
+- Si la classe enfant redéfinit la méthode, alors la méthode de l'enfant sera appelée
+  (on ne peut que réécrire le corps de la méthode)
+
+Le mot clé "parent::METHOD" permet tout de même de rappeler le comportement de la classe mère et ce même si l'on réécrit la méthode.
+
+

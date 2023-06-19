@@ -1,6 +1,9 @@
 <?php
 
 include_once 'models/Product.php';
+include_once 'models/chess/Piece.php';
+include_once 'models/chess/Rook.php';
+include_once 'models/chess/Knight.php';
 
 $table = new Product();
 $table->setCreatedAt(null);
@@ -21,3 +24,21 @@ $ikea->setName('Ikea');
 
 $seat->setBrand($ikea);
 $table->setBrand($ikea);
+
+
+/************************* CHESS ******************************************************/
+
+$pieces[] = new Knight('black');
+$pieces[] = new Knight('black');
+$pieces[] = new Knight('white');
+$pieces[] = new Knight('white');
+$pieces[] = new Rook('black');
+$pieces[] = new Rook('black');
+$pieces[] = new Rook('white');
+$pieces[] = new Rook('white');
+
+foreach ($pieces as $piece) {
+   var_dump($piece);
+}
+
+
