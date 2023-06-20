@@ -5,6 +5,16 @@ class Song
 
     private int $duration;
 
+    private string $name;
+
+    /** @var Genre[] $genres */
+    private array $genres;
+
+    public function __construct()
+    {
+        $this->genres = [];
+    }
+
     /**
      * @return int
      */
@@ -19,6 +29,36 @@ class Song
     public function setDuration(int $duration): void
     {
         $this->duration = $duration;
+    }
+
+    /**
+     * @return Genre[]
+     */
+    public function getGenres(): array
+    {
+        return $this->genres;
+    }
+
+    public function addGenre(Genre $genre): void {
+        if (!in_array($genre, $this->genres)) {
+            $this->genres[] = $genre;
+        }
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName(string $name): void
+    {
+        $this->name = $name;
     }
 
     public function displayDuration(): string {

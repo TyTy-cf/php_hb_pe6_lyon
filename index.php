@@ -4,6 +4,7 @@ include_once 'models/Product.php';
 include_once 'models/chess/Piece.php';
 include_once 'models/chess/Rook.php';
 include_once 'models/chess/Knight.php';
+include_once 'models/spotifish/Genre.php';
 include_once 'models/spotifish/Song.php';
 
 $table = new Product();
@@ -45,12 +46,4 @@ foreach ($pieces as $piece) {
 
 /************************* SPOTIFISH ******************************************************/
 
-$song = new Song();
-$song->setDuration(256);
-echo 'Durée de la chanson ' . $song->displayDuration();
 
-echo '<br>';
-
-$song1 = new Song();
-$song1->setDuration(222);
-echo 'Durée de la chanson ' . $song1->displayDuration();
