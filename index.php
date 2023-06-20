@@ -38,7 +38,8 @@ $pieces[] = new Rook('white');
 $pieces[] = new Rook('white');
 
 foreach ($pieces as $piece) {
-    echo '<img src="'. $piece->getImage() .'">';
+//    echo '<img src="'. $piece->getImage() .'">';
+    $piece->randomMove();
 }
 
 

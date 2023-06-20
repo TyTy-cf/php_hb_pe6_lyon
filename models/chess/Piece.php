@@ -31,4 +31,7 @@ abstract class Piece
 
     public abstract function move();
 
+    public function randomMove(): void {
+        echo 'RandomMove du parent <br>';
+    }
 }

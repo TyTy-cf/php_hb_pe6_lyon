@@ -3,6 +3,9 @@
           RECAP CLASSE & POO
 /**************************************/
 
+### Qu'est-ce qu'une classe ?
+Une classe est une représentation abstraite d'un objet de la vie courante en programmation.
+
 ### 3 indices de visibilité :
 - public : accessible en dehors de la classe
 - private : seulement à l'intérieur de la classe

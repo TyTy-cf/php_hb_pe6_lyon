@@ -22,7 +22,6 @@ class Product
 
     public function __construct()
     {
-        $this->createdAt = new DateTime();
         $this->tags = [];
     }
 
@@ -92,7 +91,7 @@ class Product
     public function addTag(string $tag): void
     {
         if (!in_array($tag, $this->tags)) {
-            $this->tags[] = $tag;
+            $this->tags[] = $tag; // Ajouter un élément dans le tableau
         }
     }
 

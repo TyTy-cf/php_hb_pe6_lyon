@@ -13,4 +13,8 @@ class Knight extends Piece
         echo ' c\'est un cavalier !<br>';
     }
 
+    public function randomMove(): void {
+        echo 'RandomMove du Cavalier <br>';
+    }
+
 }

@@ -13,4 +13,9 @@ class Rook extends Piece
         echo 'Déplacement de la tour ! ('.Rook::class.')<br>';
     }
 
+    public function randomMove(): void {
+        parent::randomMove();
+        echo 'RandomMove de la tour <br>';
+    }
+
 }
