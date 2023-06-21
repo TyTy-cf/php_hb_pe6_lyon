@@ -1,13 +1,15 @@
-<?php include_once __DIR__ . '/../component/header.php' ?>
-<?php include_once __DIR__ . '/../models/geo-gouv/Region.php' ?>
-<?php include_once __DIR__ . '/../service/HttpApiClient.php' ?>
-
 <?php
+
+use Service\HttpApiClient;
+use Models\GeoGouv\Region;
+use Models\Region as MRegion;
 
 $httpApiClient = new HttpApiClient();
 $data = $httpApiClient->getArrayDataFromUrl('https://geo.api.gouv.fr/regions');
 
 $regions = [];
+
+new MRegion();
 
 foreach ($data as $jsonItem) {
     $region = new Region();

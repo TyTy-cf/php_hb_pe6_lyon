@@ -1,11 +1,13 @@
 <?php
 
-//include_once 'models/Product.php';
-//include_once 'models/chess/Piece.php';
-//include_once 'models/chess/Rook.php';
-//include_once 'models/chess/Knight.php';
-//include_once 'models/spotifish/Genre.php';
-//include_once 'models/spotifish/Song.php';
+include_once 'autoload.php';
+
+include_once __DIR__ . '/component/header.php';
+
+use Models\Spotifish\Playlist;
+use Models\Spotifish\Artist;
+use Models\Spotifish\Genre;
+use Models\Spotifish\Song;
 
 //$table = new Product();
 //$table->setCreatedAt(null);
@@ -29,7 +31,7 @@
 //
 //
 ///************************* CHESS ******************************************************/
-//
+
 //$pieces[] = new Knight('black');
 //$pieces[] = new Knight('black');
 //$pieces[] = new Knight('white');
@@ -45,13 +47,6 @@
 //}
 
 /************************* SPOTIFISH ******************************************************/
-
-
-include_once __DIR__ . '/models/spotifish/Song.php';
-include_once __DIR__ . '/models/spotifish/Artist.php';
-include_once __DIR__ . '/models/spotifish/Genre.php';
-include_once __DIR__ . '/models/spotifish/AbstractMusicalStock.php';
-include_once __DIR__ . '/models/spotifish/Playlist.php';
 
 $artist = new Artist();
 $artist->setName('Eagles');
@@ -88,4 +83,5 @@ $myPlaylist->addSong($song1);
 //
 //echo '<br>';
 
+//include_once __DIR__ . '/page/regions.php';
 include_once __DIR__ . '/page/departments.php';

@@ -1,5 +1,7 @@
 <?php
 
+namespace Models\GeoGouv;
+
 class Region
 {
 

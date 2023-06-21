@@ -1,8 +1,7 @@
-<?php include_once __DIR__ . '/../component/header.php' ?>
-<?php include_once __DIR__ . '/../models/geo-gouv/Department.php' ?>
-<?php include_once __DIR__ . '/../service/HttpApiClient.php' ?>
-
 <?php
+
+use Models\GeoGouv\Department;
+use Service\HttpApiClient;
 
 $httpApiClient = new HttpApiClient();
 $data = $httpApiClient->getArrayDataFromUrl('https://geo.api.gouv.fr/departements');
@@ -10,11 +9,12 @@ $data = $httpApiClient->getArrayDataFromUrl('https://geo.api.gouv.fr/departement
 $departments = [];
 
 foreach ($data as $jsonItem) {
-   $departments[] = new Department(
+   $department = new Department(
        $jsonItem['nom'],
        $jsonItem['code'],
        $jsonItem['codeRegion']
    );
+   $departments[] = $department;
 }
 //echo '<pre>';
 //var_dump($departments);

@@ -1,6 +1,6 @@
 <?php
 
-class Rook extends Piece
+class Rook extends Piece implements IFooBar
 {
 
     public function __construct(string $color)
@@ -18,4 +18,8 @@ class Rook extends Piece
         echo 'RandomMove de la tour <br>';
     }
 
+    public function moveFooBar()
+    {
+        echo 'MoveFooBar';
+    }
 }

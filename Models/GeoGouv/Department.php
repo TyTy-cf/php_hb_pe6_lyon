@@ -1,7 +1,11 @@
 <?php
 
-class Department
+namespace Models\GeoGouv;
+
+class Department implements ISlugify
 {
+
+    private string $slug;
 
     // Indiquer private dans un construct revient à :
     // - créer automatiquement une propriété de même nom et de même visibilité
@@ -37,4 +41,10 @@ class Department
         return $this->codeRegion;
     }
 
+    public function generateSlug(): void
+    {
+        if ($this->name) {
+            $this->slug = strtolower($this->name);
+        }
+    }
 }

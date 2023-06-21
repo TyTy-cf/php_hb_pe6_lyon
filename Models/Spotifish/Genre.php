@@ -1,5 +1,7 @@
 <?php
 
+namespace Models\Spotifish;
+
 class Genre
 {
 

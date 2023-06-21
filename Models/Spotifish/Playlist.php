@@ -1,5 +1,9 @@
 <?php
 
+namespace Models\Spotifish;
+
+use DateTime;
+
 class Playlist extends AbstractMusicalStock
 {
 
