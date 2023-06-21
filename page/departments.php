@@ -1,11 +1,11 @@
 <?php include_once __DIR__ . '/../component/header.php' ?>
 <?php include_once __DIR__ . '/../models/geo-gouv/Department.php' ?>
+<?php include_once __DIR__ . '/../service/HttpApiClient.php' ?>
 
 <?php
 
-$url = 'https://geo.api.gouv.fr/departements';
-$json = file_get_contents($url);
-$data = json_decode($json, true); // transformer le json en tableau
+$httpApiClient = new HttpApiClient();
+$data = $httpApiClient->getArrayDataFromUrl('https://geo.api.gouv.fr/departements');
 
 $departments = [];
 
