@@ -46,7 +46,6 @@
 
 /************************* SPOTIFISH ******************************************************/
 
-//include_once __DIR__ . '/page/regions.php';
 
 include_once __DIR__ . '/models/spotifish/Song.php';
 include_once __DIR__ . '/models/spotifish/Artist.php';
@@ -85,6 +84,8 @@ $myPlaylist->addSong($song1);
 // => format de date
 //echo $myPlaylist->getCreatedAt()->format('d/m/Y');
 
-echo $myPlaylist->getTotalDuration();
+//echo $myPlaylist->getTotalDuration();
+//
+//echo '<br>';
 
-echo '<br>';
+include_once __DIR__ . '/page/departments.php';
