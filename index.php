@@ -1,21 +1,24 @@
 <?php
 
-include_once 'autoload.php';
-
 include_once __DIR__ . '/component/header.php';
 
 use Models\Spotifish\Playlist;
 use Models\Spotifish\Artist;
 use Models\Spotifish\Genre;
 use Models\Spotifish\Song;
+use Models\Product;
+use Models\Brand;
+use Models\Chess\Knight;
+use Models\Chess\Rook;
+
 
 $table = new Product();
 $table->setCreatedAt(null);
 $table->addTag('playmobil');
 
-//$table->setPrice(119.99);
-//$table->setName('Table playmobil');
-//$table->setDescription('Super table playmobil en excellent état, peu servie');
+$table->setPrice(119.99);
+$table->setName('Table playmobil');
+$table->setDescription('Super table playmobil en excellent état, peu servie');
 
 $seat = new Product();
 $seat->setPrice(520);
@@ -84,4 +87,11 @@ $myPlaylist->addSong($song1);
 //echo '<br>';
 
 //include_once __DIR__ . '/page/regions.php';
-include_once __DIR__ . '/page/departments.php';
+//include_once __DIR__ . '/page/departments.php';
+
+?>
+
+<a href="page/user/register.php" class="btn btn-primary mt-5">
+    S'inscrire
+</a>
+

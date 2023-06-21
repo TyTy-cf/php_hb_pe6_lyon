@@ -1,6 +1,8 @@
 <?php
 
-include_once 'models/Brand.php';
+namespace Models;
+
+use DateTime;
 
 class Product
 {

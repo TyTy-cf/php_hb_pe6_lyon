@@ -1,5 +1,9 @@
 <?php
 
+namespace Models\Chess;
+
+use Models\IFooBar;
+
 class Rook extends Piece implements IFooBar
 {
 

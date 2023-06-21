@@ -1,5 +1,7 @@
 <?php
 
+namespace Models\Chess;
+
 class Knight extends Piece
 {
 

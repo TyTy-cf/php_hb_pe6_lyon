@@ -1,5 +1,7 @@
 <?php
 
+namespace Models;
+
 interface IFooBar
 {
 
