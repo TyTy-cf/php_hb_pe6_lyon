@@ -10,6 +10,11 @@ class Department implements ISlugify
     // Indiquer private dans un construct revient à :
     // - créer automatiquement une propriété de même nom et de même visibilité
     // - l'assigner directement à la valeur passée en paramètre du constructeur
+    /**
+     * @param string $name le nom du département
+     * @param string $code le code du département
+     * @param string $codeRegion le code de la région
+     */
     public function __construct(
         private string $name,
         private string $code,

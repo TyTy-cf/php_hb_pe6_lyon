@@ -1,7 +1,6 @@
 <?php
 
 spl_autoload_register(function ($className) {
-    echo $className . '<br>';
 
     $classPath = str_replace('\\', '/', $className);
 

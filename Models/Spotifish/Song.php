@@ -81,6 +81,9 @@ class Song
         }
     }
 
+    /**
+     * @return string la durée de la chanson au format mm:ss
+     */
     public function displayDuration(): string {
         $seconds = $this->duration % 60;
         if ($seconds < 10) {

@@ -59,12 +59,18 @@ abstract class AbstractMusicalStock
         return $this->songs;
     }
 
+    /**
+     * @param Song $song Ajoute une chanson dans le support musical si celle-ci n'y a pas déjà été ajouté
+     */
     public function addSong(Song $song): void {
         if (!in_array($song, $this->songs)) {
             $this->songs[] = $song;
         }
     }
 
+    /**
+     * @return int Durée totale du support musical en seconde
+     */
     public function getTotalDuration(): int {
         $duration = 0;
         foreach ($this->songs as $song) {
