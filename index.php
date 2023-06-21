@@ -46,4 +46,45 @@
 
 /************************* SPOTIFISH ******************************************************/
 
-include_once __DIR__ . '/page/regions.php';
+//include_once __DIR__ . '/page/regions.php';
+
+include_once __DIR__ . '/models/spotifish/Song.php';
+include_once __DIR__ . '/models/spotifish/Artist.php';
+include_once __DIR__ . '/models/spotifish/Genre.php';
+include_once __DIR__ . '/models/spotifish/AbstractMusicalStock.php';
+include_once __DIR__ . '/models/spotifish/Playlist.php';
+
+$artist = new Artist();
+$artist->setName('Eagles');
+$artist->setBeginningYear(1971);
+
+$genre = new Genre();
+$genre->setName('Rock');
+
+$song = new Song();
+$song->setName('Hotel california');
+$song->setDuration(336);
+$song->addArtist($artist);
+$song->addGenre($genre);
+
+$song1 = new Song();
+$song1->setName('House of the rising sun');
+$song1->setDuration(464);
+$song1->addArtist($artist);
+$song1->addGenre($genre);
+
+$myPlaylist = new Playlist();
+$myPlaylist->setName('My super playlist oldschool');
+$myPlaylist->addSong($song);
+$myPlaylist->addSong($song1);
+
+//echo '<pre>';
+//var_dump($myPlaylist);
+//echo '</pre>';
+
+// => format de date
+//echo $myPlaylist->getCreatedAt()->format('d/m/Y');
+
+echo $myPlaylist->getTotalDuration();
+
+echo '<br>';

@@ -10,9 +10,13 @@ class Song
     /** @var Genre[] $genres */
     private array $genres;
 
+    /** @var Artist[] $artists */
+    private array $artists;
+
     public function __construct()
     {
         $this->genres = [];
+        $this->artists = [];
     }
 
     /**
@@ -59,6 +63,20 @@ class Song
     public function setName(string $name): void
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return Artist[]
+     */
+    public function getArtists(): array
+    {
+        return $this->artists;
+    }
+
+    public function addArtist(Artist $artist): void {
+        if (!in_array($artist, $this->artists)) {
+            $this->artists[] = $artist;
+        }
     }
 
     public function displayDuration(): string {
