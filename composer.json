@@ -19,6 +19,7 @@
         "symfony/var-dumper": "^5.4"
     },
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "symfony/http-client": "5.4"
     }
 }

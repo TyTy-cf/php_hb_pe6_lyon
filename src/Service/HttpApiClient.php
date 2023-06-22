@@ -2,12 +2,16 @@
 
 namespace App\Service;
 
+// => Lorsque l'on utilise une classe d'un package (vendor) alors pas besoin de préciser App\
+use Symfony\Component\HttpClient\HttpClient;
+
 class HttpApiClient
 {
 
-    public function getArrayDataFromUrl(string $url): array {
-        $json = file_get_contents($url);
-        return json_decode($json, true);
+    public function getFromUrl(string $url): array {
+        $client = HttpClient::create();
+        $response = $client->request('GET', $url);
+        return json_decode($response->getContent(), true);
     }
 
 }
