@@ -1,5 +1,7 @@
 <?php
 
+include_once __DIR__ . '/../component/header.php';
+
 use App\Models\GeoGouv\Department;
 use App\Service\HttpApiClient;
 

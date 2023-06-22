@@ -91,7 +91,22 @@ $myPlaylist->addSong($song1);
 
 ?>
 
-<a href="page/user/register.php" class="btn btn-primary mt-5">
-    S'inscrire
-</a>
+
+<div class="row">
+    <div class="col">
+        <a href="page/user/register.php" class="btn btn-primary mt-5">
+            S'inscrire
+        </a>
+    </div>
+    <div class="col">
+        <a href="page/regions.php" class="btn btn-primary mt-5">
+            Régions
+        </a>
+    </div>
+    <div class="col">
+        <a href="page/departments.php" class="btn btn-primary mt-5">
+            Départements
+        </a>
+    </div>
+</div>
 

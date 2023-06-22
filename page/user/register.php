@@ -1,6 +1,11 @@
 <?php
 
+use App\Models\Spotifish\User;
+
 include_once '../../component/header.php';
+
+$user = new User();
+$isEdit = false;
 
 ?>
 
@@ -9,8 +14,6 @@ include_once '../../component/header.php';
 </h1>
 
 <?php
-
-$user = 'toto';
 
 include '../form/_user.php';
 

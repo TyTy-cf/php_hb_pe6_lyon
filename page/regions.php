@@ -1,5 +1,7 @@
 <?php
 
+include_once __DIR__ . '/../component/header.php';
+
 use App\Service\HttpApiClient;
 use App\Models\GeoGouv\Region;
 use App\Models\Region as MRegion;
