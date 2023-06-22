@@ -1,6 +1,6 @@
 <?php
 
-namespace Models\GeoGouv;
+namespace App\Models\GeoGouv;
 
 interface ISlugify
 {

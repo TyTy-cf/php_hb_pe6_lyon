@@ -1,0 +1,24 @@
+{
+    "name": "hb/pe6_lyon",
+    "description": "Projet de PHP POO pour la session HB PE6 de Lyon",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kevin Tourret",
+            "email": "kevin@drosalys.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "symfony/var-dumper": "^5.4"
+    },
+    "require": {
+        "php": "^8.0"
+    }
+}

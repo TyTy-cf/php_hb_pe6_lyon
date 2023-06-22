@@ -1,8 +1,8 @@
 <?php
 
-use Service\HttpApiClient;
-use Models\GeoGouv\Region;
-use Models\Region as MRegion;
+use App\Service\HttpApiClient;
+use App\Models\GeoGouv\Region;
+use App\Models\Region as MRegion;
 
 $httpApiClient = new HttpApiClient();
 $data = $httpApiClient->getArrayDataFromUrl('https://geo.api.gouv.fr/regions');

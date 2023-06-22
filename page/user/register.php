@@ -10,7 +10,9 @@ include_once '../../component/header.php';
 
 <?php
 
-include_once '../form/_user.php';
+$user = 'toto';
+
+include '../form/_user.php';
 
 ?>
 

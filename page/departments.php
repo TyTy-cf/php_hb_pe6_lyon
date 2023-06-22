@@ -1,7 +1,7 @@
 <?php
 
-use Models\GeoGouv\Department;
-use Service\HttpApiClient;
+use App\Models\GeoGouv\Department;
+use App\Service\HttpApiClient;
 
 $httpApiClient = new HttpApiClient();
 $data = $httpApiClient->getArrayDataFromUrl('https://geo.api.gouv.fr/departements');

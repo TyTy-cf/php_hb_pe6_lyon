@@ -1,6 +1,6 @@
 <?php
 
-namespace Models\Chess;
+namespace App\Models\Chess;
 
 abstract class Piece
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Models\Chess;
+namespace App\Models\Chess;
 
-use Models\IFooBar;
+use App\Models\IFooBar;
 
 class Rook extends Piece implements IFooBar
 {
@@ -24,6 +24,6 @@ class Rook extends Piece implements IFooBar
 
     public function moveFooBar()
     {
-        echo 'MoveFooBar';
+        // TODO: Implement moveFooBar() method.
     }
 }

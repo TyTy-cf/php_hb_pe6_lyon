@@ -1,6 +1,6 @@
 <?php
 
-namespace Models\Spotifish;
+namespace App\Models\Spotifish;
 
 use DateTime;
 

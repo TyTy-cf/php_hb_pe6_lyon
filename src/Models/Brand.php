@@ -1,8 +1,8 @@
 <?php
 
-namespace Models\Spotifish;
+namespace App\Models;
 
-class Genre
+class Brand
 {
 
     private string $name;

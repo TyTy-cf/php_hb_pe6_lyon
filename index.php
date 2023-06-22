@@ -2,15 +2,14 @@
 
 include_once __DIR__ . '/component/header.php';
 
-use Models\Spotifish\Playlist;
-use Models\Spotifish\Artist;
-use Models\Spotifish\Genre;
-use Models\Spotifish\Song;
-use Models\Product;
-use Models\Brand;
-use Models\Chess\Knight;
-use Models\Chess\Rook;
-
+use App\Models\Spotifish\Playlist;
+use App\Models\Spotifish\Artist;
+use App\Models\Spotifish\Genre;
+use App\Models\Spotifish\Song;
+use App\Models\Product;
+use App\Models\Brand;
+use App\Models\Chess\Knight;
+use App\Models\Chess\Rook;
 
 $table = new Product();
 $table->setCreatedAt(null);
@@ -48,6 +47,7 @@ foreach ($pieces as $piece) {
 //    echo '<img src="'. $piece->getImage() .'">';
 //    $piece->randomMove();
 }
+
 
 /************************* SPOTIFISH ******************************************************/
 
